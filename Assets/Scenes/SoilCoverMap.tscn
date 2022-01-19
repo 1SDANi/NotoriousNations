@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://51qdu5a6f2dd"]
+
+[ext_resource type="TileSet" uid="uid://bfife8yan4dh1" path="res://Assets/Tilesets/SoilCovers.tres" id="1_hbcx7"]
+[ext_resource type="Script" path="res://Assets/GDScript/LayerMap/SoilCoverMap.gd" id="2_omqva"]
+
+[node name="SoilCoverMap" type="TileMap"]
+tile_set = ExtResource( "1_hbcx7" )
+cell_quadrant_size = 32
+format = 2
+script = ExtResource( "2_omqva" )

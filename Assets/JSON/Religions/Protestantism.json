@@ -1,0 +1,9 @@
+{
+  "s_name":"Protestantism",
+  "s_type":"ReligionType",
+  "s_spread_type":"Major",
+  "s_parent_name":"Catholicism",
+  "s_development_type":"Commerce",
+  "i_development_value":1000,
+  "i_development_length":20
+}

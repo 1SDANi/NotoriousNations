@@ -1,0 +1,9 @@
+{
+  "s_name":"Orthodoxy",
+  "s_type":"ReligionType",
+  "s_spread_type":"Major",
+  "s_parent_name":"Judaism",
+  "s_development_type":"Unrest",
+  "i_development_value":10,
+  "i_development_length":20
+}

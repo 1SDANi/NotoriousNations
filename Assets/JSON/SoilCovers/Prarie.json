@@ -1,0 +1,12 @@
+{
+  "s_name":"Prarie",
+  "s_type":"SoilCover",
+  "i_food":1,
+  "i_prod":1,
+  "i_comm":0,
+  "i_move":0,
+  "b_rainwater":false,
+  "b_can_farm":true,
+  "b_can_ranch":true,
+  "b_can_camp":true
+}

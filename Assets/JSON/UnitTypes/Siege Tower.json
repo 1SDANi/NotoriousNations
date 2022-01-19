@@ -1,0 +1,11 @@
+{
+  "s_name":"Siege Tower",
+  "s_type":"UnitType",
+  "s_combat_role":"Siege",
+  "s_combat_range":"Melee",
+  "i_strength":1,
+  "i_speed":1,
+  "b_no_tile_def":true,
+  "b_infiltrate":true,
+  "b_medic":true
+}

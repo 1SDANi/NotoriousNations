@@ -1,0 +1,12 @@
+{
+  "s_name":"Grassland",
+  "s_type":"SoilCover",
+  "i_food":2,
+  "i_prod":0,
+  "i_comm":0,
+  "i_move":0,
+  "b_rainwater":true,
+  "b_can_farm":true,
+  "b_can_ranch":true,
+  "b_can_camp":true
+}

@@ -1,0 +1,9 @@
+{
+  "s_name":"Islam",
+  "s_type":"ReligionType",
+  "s_spread_type":"Major",
+  "s_parent_name":"Orthodoxy",
+  "s_development_type":"Food Stagnation",
+  "i_development_value":10,
+  "i_development_length":20
+}

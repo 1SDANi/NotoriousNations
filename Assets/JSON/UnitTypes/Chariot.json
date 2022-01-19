@@ -1,0 +1,11 @@
+{
+  "s_name":"Chariot",
+  "s_type":"UnitType",
+  "s_combat_role":"LightCavalry",
+  "s_combat_range":"Ranged",
+  "i_strength":4,
+  "i_speed":2,
+  "i_open_atk":50,
+  "b_no_tile_def":true,
+  "b_skirmish":true
+}

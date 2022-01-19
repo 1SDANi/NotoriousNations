@@ -1,0 +1,28 @@
+{
+	"s_name": "Test Map 1",
+	"s_type": "Map",
+	"i_x": 2,
+	"i_y": 2,
+	"dict_tiles": {
+		"0,0": {
+			"s_name": "Barcelona",
+			"s_type": "Tile",
+			"s_soil_cover": "Grassland"
+		},
+		"0,1": {
+			"s_name": "Barcelona",
+			"s_type": "Tile",
+			"s_soil_cover": "Steppe"
+		},
+		"1,0": {
+			"s_name": "Barcelona",
+			"s_type": "Tile",
+			"s_soil_cover": "Arctic"
+		},
+		"1,1": {
+			"s_name": "Barcelona",
+			"s_type": "Tile",
+			"s_soil_cover": "Desert"
+		}
+	}
+}
