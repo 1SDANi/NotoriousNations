@@ -1,14 +1,14 @@
 {
-  "s_name":"Javelineer",
-  "s_type":"UnitType",
-  "s_combat_role":"Skirmish",
-  "s_combat_range":"Ranged",
-  "i_strength":2,
-  "i_speed":1,
-  "i_collateral":1,
-  "i_canopy_atk":50,
-  "i_canopy_def":50,
-  "i_hill_atk":50,
-  "i_hill_def":50,
-  "b_skirmish":true
+  "s_name": "Javelineer",
+  "s_type": "UnitType",
+  "s_combat_role": "Skirmish",
+  "s_combat_range": "Ranged",
+  "i_strength": 2,
+  "i_speed": 1,
+  "i_collateral": 1,
+  "i_canopy_atk": 50,
+  "i_canopy_def": 50,
+  "i_hill_atk": 50,
+  "i_hill_def": 50,
+  "b_skirmish": true
 }

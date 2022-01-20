@@ -1,16 +1,16 @@
 {
-  "s_name":"Archer",
-  "s_type":"UnitType",
-  "s_combat_role":"Defense",
-  "s_combat_range":"Ranged",
-  "i_strength":3,
-  "i_speed":1,
-  "i_city_def":50,
-  "i_hill_def":25,
-  "dict_i_role_atk":{
-    "LightCavalry":25
+  "s_name": "Archer",
+  "s_type": "UnitType",
+  "s_combat_role": "Defense",
+  "s_combat_range": "Ranged",
+  "i_strength": 3,
+  "i_speed": 1,
+  "i_city_def": 50,
+  "i_hill_def": 25,
+  "dict_i_role_atk": {
+    "LightCavalry": 25
   },
-  "dict_i_role_def":{
-    "LightCavalry":25
+  "dict_i_role_def": {
+    "LightCavalry": 25
   }
 }

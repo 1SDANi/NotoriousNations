@@ -5,17 +5,17 @@ extends Item
 var _i_food: int = 0
 @export var i_food: int:
 	get: return _i_food
-	
+
 # int containing the amount of production obtained from working this tile
 var _i_prod: int = 0
 @export var i_prod: int:
 	get: return _i_prod
-	
+
 # int containing the amount of commerce obtained from working this tile
 var _i_comm: int = 0
 @export var i_comm: int:
 	get: return _i_comm
-	
+
 # int containing the cost of moving onto this tile
 var _i_move: int = 1
 @export var i_move: int:
@@ -53,17 +53,25 @@ var _b_can_camp: bool = false
 # can_ranch: bool containing whether this tile can be ranched
 # can camp: bool containing whether this tile can be camped
 # returns void
-func _init (name: String, type: String, food: int, prod: int, comm: int, move: int, 
-			rainwater: bool, can_farm: bool, can_ranch: bool, can_camp: bool) -> void:
+# func _init (name: String, type: String, food: int, prod: int, comm: int, move: int,
+# 			rainwater: bool, can_farm: bool, can_ranch: bool, can_camp: bool) -> void:
+# 	# call the parent constructor
+# 	super(name,type)
+#
+# 	# set the class variables
+# 	_i_food=food
+# 	_i_prod=prod
+# 	_i_comm=comm
+# 	_i_move=move
+# 	_b_rainwater=rainwater
+# 	_b_can_farm=can_farm
+# 	_b_can_ranch=can_ranch
+# 	_b_can_camp=can_camp
+
+func _init (dict: Dictionary) -> void:
 	# call the parent constructor
-	super(name,type)
-	
+	super(dict["s_name"], dict["s_type"])
+
 	# set the class variables
-	_i_food=food
-	_i_prod=prod
-	_i_comm=comm
-	_i_move=move
-	_b_rainwater=rainwater
-	_b_can_farm=can_farm
-	_b_can_ranch=can_ranch
-	_b_can_camp=can_camp
+	for name in dict:
+		self["_" + name] = dict[name]
