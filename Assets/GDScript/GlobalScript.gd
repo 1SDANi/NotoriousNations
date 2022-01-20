@@ -57,7 +57,7 @@ func b_register_unit_atlas(imge_unit_atlas: Image) -> bool:
 	var imtx : ImageTexture = ImageTexture.new()
 	imtx.create_from_image(Globals._g_imge_unit_atlas)
 	
-	g_tlst_soil_cover_tileset_source = TileSetAtlasSource.new()
+	g_tlst_unit_tileset_source = TileSetAtlasSource.new()
 	
 	new_unit_atlas.emit()
 	return true

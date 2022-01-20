@@ -20,6 +20,11 @@ _global_script_classes=[{
 "path": "res://Assets/GDScript/JSON/FolderCrawler.gd"
 }, {
 "base": "Node",
+"class": &"GameMap",
+"language": &"GDScript",
+"path": "res://Assets/GDScript/GameMap.gd"
+}, {
+"base": "Node",
 "class": &"GlobalScript",
 "language": &"GDScript",
 "path": "res://Assets/GDScript/GlobalScript.gd"
@@ -84,6 +89,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://Assets/GDScript/Units/Unit.gd"
 }, {
+"base": "LayerMap",
+"class": &"UnitMap",
+"language": &"GDScript",
+"path": "res://Assets/GDScript/LayerMap/UnitMap.gd"
+}, {
 "base": "Item",
 "class": &"UnitType",
 "language": &"GDScript",
@@ -97,6 +107,7 @@ _global_script_classes=[{
 _global_script_class_icons={
 "Camera": "",
 "FolderCrawler": "",
+"GameMap": "",
 "GlobalScript": "",
 "Item": "",
 "JSONReader": "",
@@ -110,6 +121,7 @@ _global_script_class_icons={
 "Tile": "",
 "TileType": "",
 "Unit": "",
+"UnitMap": "",
 "UnitType": "",
 "UnitTypeJSON": ""
 }

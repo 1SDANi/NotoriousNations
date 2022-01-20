@@ -7,12 +7,12 @@
 		"0,0": {
 			"s_name": "Barcelona",
 			"s_type": "Tile",
-			"s_soil_cover": "Grassland"
+			"s_soil_cover": "Grassland",
 			"a_dict_s_units": [
 				{
 					"s_name":"Unit1",
 					"s_owner":"player1",
-					"s_unit_type":"Archer",
+					"s_unit_type":"Archer"
 				}
 			]
 		},
