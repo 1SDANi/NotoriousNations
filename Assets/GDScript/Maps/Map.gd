@@ -20,14 +20,18 @@ var _dict_tiles: Dictionary = {}:
 # s_coordinates: a string formatted as [x],[y]
 # returns the tile at the given coordinates
 func dict_tiles_from_string(s_coordinates) -> Tile:
-	return _dict_tiles[s_coordinates]
+	if _dict_tiles.has(s_coordinates):
+		return _dict_tiles[s_coordinates]
+	else: return null
 
 # getter function for individual tiles in dict_tiles
 # x: integer containing the x coordinate of the tile to get
 # y: integer containing the y coordinate of the tile to get
 # returns the tile at the given coordinates
 func dict_tiles_from_int(x: int, y: int) -> Tile:
-	return _dict_tiles[str(x) + "," + str(y)]
+	if _dict_tiles.has(str(x) + "," + str(y)):
+		return _dict_tiles[str(x) + "," + str(y)]
+	else: return null
 
 # called upon initialization
 # name: a string of the name of the map

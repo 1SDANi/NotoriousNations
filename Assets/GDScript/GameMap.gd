@@ -41,8 +41,9 @@ func _unhandled_input(event):
 		# convert the local position of the mouse position to the map coordinates
 		var v_tile_pos = scmp_soil_cover_map.world_to_map(v_event_pos)
 		
-		Globals.vc2i_tile_cursor = v_tile_pos
-		Globals.tile_cursor_update.emit()
+		if (Globals.map_map._dict_tiles.has(str(v_tile_pos.x) + "," + str(v_tile_pos.y))):
+			Globals.vc2i_tile_cursor = v_tile_pos
+			Globals.tile_cursor_update.emit()
 		
 		# set cell at v_tile_pos to the next index in the cycle
 		#scmp_soil_cover_map.set_cell(0,v_tile_pos,0,vc2i_cycle(scmp_soil_cover_map.get_cell_atlas_coords(0,v_tile_pos,false)),0)
