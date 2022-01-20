@@ -31,7 +31,7 @@ static func parse_folder() -> void:
 			continue
 			
 		# read the json markdown in the soil cover .json at s_path as a dictionary for creating a new soil cover from
-		dict_json = JSONReader.dict_read_json(s_path)
+		dict_json = JSONReader.read_json(s_path)
 		
 		if dict_json == null:
 			push_warning("file at " + s_path + " is not a json file")
@@ -102,16 +102,16 @@ static func parse_folder() -> void:
 		i_y_pos = int(floor(i_i / i_x))
 		
 		# create a new soil cover from dict_json's various key/value pairs
-		scvr_soil_cover = SoilCoverType.new (JSONReader.s_get_json_entry(dict_json,Globals.s_name_key,a_s_valid_paths[i_i],Globals.s_missing_name),
+		scvr_soil_cover = SoilCoverType.new (JSONReader.get_json_entry(dict_json,Globals.s_name_key,a_s_valid_paths[i_i],Globals.s_missing_name),
 										s_type_name,
-										JSONReader.s_get_json_entry(dict_json,"i_food",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_prod",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_comm",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_move",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"b_rainwater",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_can_farm",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_can_ranch",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_can_camp",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"i_food",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_prod",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_comm",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_move",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"b_rainwater",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_can_farm",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_can_ranch",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_can_camp",a_s_valid_paths[i_i],false),
 										i_x_pos,
 										i_y_pos)
 		

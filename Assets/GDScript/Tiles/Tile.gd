@@ -9,6 +9,10 @@ var _i_y: int = -1
 @export var i_y: int:
 	get: return _i_y
 
+var _a_unit_units: Array[Unit] = []
+var a_unit_units: Array[Unit]:
+	get: return _a_unit_units
+
 var _scvr_soil_cover_type: SoilCoverType = null
 var scvr_soil_cover_type: SoilCoverType:
 	get: return _scvr_soil_cover_type
@@ -35,6 +39,18 @@ func _init(name: String, type: String, x: int, y: int, soil_cover_type: SoilCove
 	# recalculate this tile's stats
 	recalculate()
 	
+
+# adds a unit to the tile
+# unit_unit: the unit  to add to the tile
+# returns void
+func add_unit(unit_unit: Unit) -> void:
+	a_unit_units.append(unit_unit)
+
+# remove a unit from the tile
+# unit_unit: the unit to remove from the tile
+# returns void
+func remove_unit(unit_unit: Unit) -> void:
+	a_unit_units.erase(unit_unit)
 
 # call to recalculate this tile's stats
 # returns void

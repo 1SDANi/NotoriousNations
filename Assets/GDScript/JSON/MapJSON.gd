@@ -28,7 +28,7 @@ static func a_map_parse_folder() -> void:
 		s_path = s_folder_path+"/map.json"
 		
 		# read the json markdown in the map.json at s_path as a dictionary for creating a new map from
-		dict_json = JSONReader.dict_read_json(s_path)
+		dict_json = JSONReader.read_json(s_path)
 		
 		if dict_json == null:
 			continue
@@ -38,14 +38,14 @@ static func a_map_parse_folder() -> void:
 			continue
 		
 		# store the name of this map as a string for use as its paired key
-		s_name = JSONReader.s_get_json_entry(dict_json,Globals.s_name_key,s_path,Globals.s_missing_name)
+		s_name = JSONReader.get_json_entry(dict_json,Globals.s_name_key,s_path,Globals.s_missing_name)
 		
 		# create a new map from dict_json's various key/value pairs
 		map_map = Map.new  (s_name,
 							s_type_name,
-							JSONReader.s_get_json_entry(dict_json,"i_x",s_path,0),
-							JSONReader.s_get_json_entry(dict_json,"i_y",s_path,0),
-							JSONReader.s_get_json_entry(dict_json,"dict_tiles",s_path,{}))
+							JSONReader.get_json_entry(dict_json,"i_x",s_path,0),
+							JSONReader.get_json_entry(dict_json,"i_y",s_path,0),
+							JSONReader.get_json_entry(dict_json,"dict_tiles",s_path,{}))
 		
 		# return the dictionary of maps dict_map_maps
 		Globals.b_register_map(map_map,s_path)

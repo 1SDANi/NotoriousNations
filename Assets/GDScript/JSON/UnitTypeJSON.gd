@@ -31,7 +31,7 @@ static func parse_folder() -> void:
 			continue
 		
 		# read the json markdown in the unit type .json at s_path as a dictionary for creating a new unit type from
-		dict_json = JSONReader.dict_read_json(s_path)
+		dict_json = JSONReader.read_json(s_path)
 		
 		if dict_json == null:
 			push_warning("file at " + s_path + " is not a json file")
@@ -102,33 +102,33 @@ static func parse_folder() -> void:
 		i_y_pos = int(floor(i_i / i_x))
 		
 		# create a new unit type from dict_json's various key/value pairs
-		untp_unit_type = UnitType.new (JSONReader.s_get_json_entry(dict_json,Globals.s_name_key,a_s_valid_paths[i_i],Globals.s_missing_name),
+		untp_unit_type = UnitType.new (JSONReader.get_json_entry(dict_json,Globals.s_name_key,a_s_valid_paths[i_i],Globals.s_missing_name),
 										s_type_name,
-										JSONReader.s_get_json_entry(dict_json,"s_combat_role",a_s_valid_paths[i_i],"NoRole"),
-										JSONReader.s_get_json_entry(dict_json,"s_combat_range",a_s_valid_paths[i_i],"NoRange"),
-										JSONReader.s_get_json_entry(dict_json,"i_strength",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_speed",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_city_atk",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_city_def",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_hill_atk",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_hill_def",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_canopy_atk",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_canopy_def",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_open_atk",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_open_def",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"i_collateral",a_s_valid_paths[i_i],0),
-										JSONReader.s_get_json_entry(dict_json,"b_no_tile_def",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_skirmish",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_flanking",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_frontline",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_infiltrate",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"b_medic",a_s_valid_paths[i_i],false),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_role_atk",a_s_valid_paths[i_i],{}),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_role_def",a_s_valid_paths[i_i],{}),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_range_atk",a_s_valid_paths[i_i],{}),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_range_def",a_s_valid_paths[i_i],{}),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_type_atk",a_s_valid_paths[i_i],{}),
-										JSONReader.s_get_json_entry(dict_json,"dict_i_type_def",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"s_combat_role",a_s_valid_paths[i_i],"NoRole"),
+										JSONReader.get_json_entry(dict_json,"s_combat_range",a_s_valid_paths[i_i],"NoRange"),
+										JSONReader.get_json_entry(dict_json,"i_strength",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_speed",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_city_atk",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_city_def",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_hill_atk",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_hill_def",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_canopy_atk",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_canopy_def",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_open_atk",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_open_def",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"i_collateral",a_s_valid_paths[i_i],0),
+										JSONReader.get_json_entry(dict_json,"b_no_tile_def",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_skirmish",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_flanking",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_frontline",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_infiltrate",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"b_medic",a_s_valid_paths[i_i],false),
+										JSONReader.get_json_entry(dict_json,"dict_i_role_atk",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"dict_i_role_def",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"dict_i_range_atk",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"dict_i_range_def",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"dict_i_type_atk",a_s_valid_paths[i_i],{}),
+										JSONReader.get_json_entry(dict_json,"dict_i_type_def",a_s_valid_paths[i_i],{}),
 										i_x_pos,
 										i_y_pos)
 		

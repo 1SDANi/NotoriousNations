@@ -54,20 +54,34 @@ func _init(name: String,type: String,x: int,y: int,tiles: Dictionary) -> void:
 # returns a Dictionary of the generated tiles
 func dict_generate_tiles(tiles: Dictionary) -> Dictionary:
 	var dict_temp_tiles = {}
+	var a_dict_s_units = []
 	var dict_temp_entry
 	var s_coordinate = ""
 	for x in range(i_x):
 		for y in range(i_y):
 			s_coordinate = str(x) + "," + str(y)
+			
 			if not tiles.has(s_coordinate):
 				push_warning("tile at " + s_coordinate + "is missing from map")
 				return {}
+				
 			dict_temp_entry = tiles[s_coordinate]
+			
 			if not JSONReader.dict_validate_json(dict_temp_entry,"map coordinate " + s_coordinate,s_tile_type_name):
 				return {}
-			dict_temp_tiles[s_coordinate] = Tile.new (JSONReader.s_get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
+				
+			dict_temp_tiles[s_coordinate] = Tile.new (JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
 													s_tile_type_name,
 													x,
 													y,
-													Globals._g_dict_soil_cover_types[JSONReader.s_get_json_entry(dict_temp_entry,"s_soil_cover","map coordinate " + s_coordinate,"Grassland")])
+													Globals._g_dict_soil_cover_types[JSONReader.get_json_entry(dict_temp_entry,"s_soil_cover","map coordinate " + s_coordinate,"Grassland")])
+			
+			a_dict_s_units = JSONReader.get_json_entry(dict_temp_entry,"a_dict_s_units","map coordinate " + s_coordinate,[])
+			
+			if a_dict_s_units != []:
+				for dict_s_unit in a_dict_s_units:
+					if dict_s_unit.has("s_owner") and dict_s_unit.has("s_unit_type"):
+						dict_temp_tiles[s_coordinate].add_unit(Unit.new(JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,"Unit"),
+						"Unit",
+						Globals._g_dict_unit_types[JSONReader.get_json_entry(dict_temp_entry,"s_unit_type","map coordinate " + s_coordinate,null)]))
 	return dict_temp_tiles
