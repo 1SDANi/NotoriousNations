@@ -5,7 +5,7 @@ const s_soil_cover_folder = "res://Assets/JSON/SoilCovers/"
 const s_type_name = "SoilCover"
 
 # static function for parsing a directory for soil cover files
-static func parse_folder():
+static func parse_folder() -> void:
 	var imge_atlas : Image
 	var a_imge_images : Array[Image] = []
 	var a_dict_jsons : Array[Dictionary] = []
@@ -17,10 +17,10 @@ static func parse_folder():
 	const i_resolution : int = 32
 	
 	# dictionary for temporary storage of json files
-	var dict_json
+	var dict_json : Dictionary
 	
 	# soil cover for temporary storage of newly created soil covers
-	var scvr_soil_cover
+	var scvr_soil_cover : SoilCoverType
 	
 	# get all files in s_map_folder for iteration
 	a_s_paths = FolderCrawler.a_s_crawl_folder(s_soil_cover_folder)

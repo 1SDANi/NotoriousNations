@@ -14,7 +14,7 @@ var map_map: Map:
 	get: return _map_map
 
 # function called after initialization of itself and all parents and children
-func _ready():
+func _ready() -> void:
 	SoilCoverJSON.parse_folder()
 	UnitTypeJSON.parse_folder()
 	MapJSON.a_map_parse_folder()
@@ -58,14 +58,14 @@ func on_new_unit_atlas() -> void:
 			get_tileset().get_source(1).create_tile(Vector2i(x,y),Vector2i(1,1))
 
 # function called upon input event
-func _input(event):
+func _input(event: InputEvent) -> void:
 	# if the save button defined in Project->Project Settings->Input Map is pressed down
 	if event.is_action_pressed("save"):
 		# save map_map
 		save_map()
 	
 # function called after _input if the input event that caused it to be called has yet to be flagged as handled
-func _unhandled_input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	# if the left mouse button is pressed
 	if event is InputEventMouseButton and event.pressed and \
 			event.get_button_index() == MOUSE_BUTTON_LEFT :
@@ -76,11 +76,11 @@ func _unhandled_input(event):
 		var v_tile_pos = world_to_map(v_event_pos)
 		
 		# set cell at v_tile_pos to the next index in the cycle
-		set_cell(0,v_tile_pos,0,v_cycle(get_cell_atlas_coords(0,v_tile_pos,false)),0)
+		set_cell(0,v_tile_pos,0,vc2i_cycle(get_cell_atlas_coords(0,v_tile_pos,false)),0)
 	
 # cycle cell index
 # v_coords vector2i representing the current cell coordinates
-func v_cycle(v_index):
+func vc2i_cycle(v_index: Vector2i) -> Vector2i:
 	if v_index.x < get_tileset().get_source(0).get_atlas_grid_size().x:
 		return Vector2i(v_index.x+1,v_index.y)
 	else:
@@ -90,7 +90,7 @@ func v_cycle(v_index):
 			return Vector2i(0,0)
 
 # function to load map_map into this tilemap
-func load_map():
+func load_map() -> void:
 	# for every column(?) in map_map
 	for x in range(map_map.i_x):
 		# for every row(?) in map_map
@@ -102,7 +102,7 @@ func load_map():
 			set_cell(0,Vector2i(x,y),0,Vector2i(i_atlas_x,i_atlas_y),0)
 
 # save map
-func save_map():
+func save_map() -> void:
 	# dictionary for storing the current map's contents in
 	var dict_map = {}
 	

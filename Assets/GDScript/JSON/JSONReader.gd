@@ -3,7 +3,7 @@ extends RefCounted
 
 # static function for converting a json file into a Dictionary
 # s_path: string containing the path of the json file to read
-static func dict_read_json(s_path):
+static func dict_read_json(s_path: String) -> void:
 	# file class instance for reading
 	var file_file = File.new()
 	
@@ -60,7 +60,7 @@ static func dict_validate_json(dict_json: Dictionary, s_path: String, s_expected
 # s_entry: String of the key whose paired value should be returned
 # s_path: String containing the path where dict_json was found, only used for error checking feedback
 # v_default: default value of any variable that can be a value, returned if a value cannot be returned
-static func s_get_json_entry(dict_json: Dictionary, s_entry: String, s_path: String, v_default):
+static func s_get_json_entry(dict_json: Dictionary, s_entry: String, s_path: String, v_default) -> String:
 	# if dict_json does not contain the key "s_entry"
 	if not dict_json.has(s_entry):
 		# return v_default

@@ -39,7 +39,7 @@ func dict_tiles_from_int(x: int,y: int) -> Tile:
 # y: an integer of the height of the map
 # tiles: a dictionary of the tiles that comprise the map
 # returns void
-func _init(name,type,x,y,tiles) -> void:
+func _init(name: String,type: String,x: int,y: int,tiles: Dictionary) -> void:
 	super(name,type)
 	
 	# set the map's width and height

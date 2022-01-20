@@ -4,7 +4,7 @@ extends RefCounted
 # static function for writing dictionaries to files as json markdown
 # s_path: path of the file to write to
 # dict_contents: dictionary to write to a file as json markdown
-static func write_json(s_path,dict_contents):
+static func write_json(s_path: String,dict_contents: Dictionary) -> void:
 	# file class instance for writing
 	var file_file = File.new()
 	

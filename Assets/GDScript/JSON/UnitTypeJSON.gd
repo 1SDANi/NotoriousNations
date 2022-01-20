@@ -5,7 +5,7 @@ const s_unit_type_folder = "res://Assets/JSON/UnitTypes/"
 const s_type_name = "UnitType"
 
 # static function for parsing a directory for unit type files
-static func parse_folder():
+static func parse_folder() -> void:
 	var imge_atlas : Image
 	var a_imge_images : Array[Image] = []
 	var a_dict_jsons : Array[Dictionary] = []
@@ -17,10 +17,10 @@ static func parse_folder():
 	const i_resolution : int = 32
 	
 	# dictionary for temporary storage of json files
-	var dict_json
+	var dict_json : Dictionary
 	
 	# unit type for temporary storage of newly created unit types
-	var untp_unit_type
+	var untp_unit_type : UnitType
 	
 	# get all files in s_map_folder for iteration
 	a_s_paths = FolderCrawler.a_s_crawl_folder(s_unit_type_folder)

@@ -6,7 +6,7 @@ const s_type_name = "Map"
 
 # static function for parsing a directory for map folders
 # glob_globals: the current game's Globals.gd file
-static func a_map_parse_folder():
+static func a_map_parse_folder() -> void:
 	# string for temporary storage of map.json paths
 	var s_path
 	
