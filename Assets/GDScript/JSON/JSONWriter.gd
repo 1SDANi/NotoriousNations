@@ -12,7 +12,8 @@ static func write_json(s_path: String,dict_contents: Dictionary) -> void:
 	file_file.open(s_path, File.WRITE)
 	
 	# create a json markdow string from dict_contents for writing, format using tabs
-	var json_obj = JSON.print(dict_contents,"\t")
+	var json_parser: JSON = JSON.new()
+	var json_obj = json_parser.stringify(dict_contents,"\t")
 	
 	# write json_obj to file_file for future use
 	file_file.store_string(json_obj)

@@ -1,11 +1,12 @@
 class_name Unit
 extends Item
 
-var _untp_unit_type: UnitType = null
-var untp_unit_type : UnitType:
-	get: return _untp_unit_type
+var untp_unit_type: UnitType = null
 
-func _init (name: String, type: String, unit_type: UnitType) -> void:
+var s_owner: String = ""
+
+func _init (name: String, type: String, owner: String, unit_type: UnitType) -> void:
 	super(name, type)
 	
-	_untp_unit_type = unit_type
+	s_owner = owner
+	untp_unit_type = unit_type

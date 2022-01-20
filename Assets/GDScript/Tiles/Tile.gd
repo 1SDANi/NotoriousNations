@@ -9,12 +9,9 @@ var _i_y: int = -1
 @export var i_y: int:
 	get: return _i_y
 
-var _a_unit_units: Array[Unit] = []
-var a_unit_units: Array[Unit]:
-	get: return _a_unit_units
+var a_unit_units: Array[Unit]
 
-var _scvr_soil_cover_type: SoilCoverType = null
-var scvr_soil_cover_type: SoilCoverType:
+var _scvr_soil_cover_type: SoilCoverType = null:
 	get: return _scvr_soil_cover_type
 	set(value):
 		_scvr_soil_cover_type = value
@@ -44,13 +41,17 @@ func _init(name: String, type: String, x: int, y: int, soil_cover_type: SoilCove
 # unit_unit: the unit  to add to the tile
 # returns void
 func add_unit(unit_unit: Unit) -> void:
-	_a_unit_units.append(unit_unit)
+	a_unit_units.append(unit_unit)
+	if Globals.map_map:
+		Globals.unit_position_update.emit()
 
 # remove a unit from the tile
 # unit_unit: the unit to remove from the tile
 # returns void
 func remove_unit(unit_unit: Unit) -> void:
-	_a_unit_units.erase(unit_unit)
+	a_unit_units.erase(unit_unit)
+	if Globals.map_map:
+		Globals.unit_position_update.emit()
 
 # call to recalculate this tile's stats
 # returns void
@@ -69,38 +70,38 @@ func recalculate() -> void:
 func recalculate_food() -> void:
 	var i_temp_food = 0
 	
-	i_temp_food += scvr_soil_cover_type.i_food
+	i_temp_food += _scvr_soil_cover_type.i_food
 	
 	_i_food=i_temp_food
 	
 func recalculate_prod() -> void:
 	var i_temp_prod = 0
 	
-	i_temp_prod += scvr_soil_cover_type.i_prod
+	i_temp_prod += _scvr_soil_cover_type.i_prod
 	
 	_i_prod=i_temp_prod
 	
 func recalculate_comm() -> void:
 	var i_temp_comm = 0
 	
-	i_temp_comm += scvr_soil_cover_type.i_comm
+	i_temp_comm += _scvr_soil_cover_type.i_comm
 	
 	_i_comm=i_temp_comm
 	
 func recalculate_move() -> void:
 	var i_temp_move : int = 0
 	
-	if i_temp_move >= 0 and scvr_soil_cover_type.i_move >= 0:
-		i_temp_move += scvr_soil_cover_type.i_move
-	elif scvr_soil_cover_type.i_move < i_temp_move:
-		i_temp_move = scvr_soil_cover_type.i_move
+	if i_temp_move >= 0 and _scvr_soil_cover_type.i_move >= 0:
+		i_temp_move += _scvr_soil_cover_type.i_move
+	elif _scvr_soil_cover_type.i_move < i_temp_move:
+		i_temp_move = _scvr_soil_cover_type.i_move
 	
 	_i_move=i_temp_move
 	
 func recalculate_rainwater() -> void:
 	var b_temp_rainwater = true
 	
-	if not scvr_soil_cover_type.b_rainwater:
+	if not _scvr_soil_cover_type.b_rainwater:
 		b_temp_rainwater = false
 	
 	_b_rainwater=b_temp_rainwater
@@ -108,7 +109,7 @@ func recalculate_rainwater() -> void:
 func recalculate_can_farm() -> void:
 	var b_temp_can_farm = true
 	
-	if not scvr_soil_cover_type.b_can_farm:
+	if not _scvr_soil_cover_type.b_can_farm:
 		b_temp_can_farm = false
 	
 	_b_can_farm=b_temp_can_farm
@@ -116,7 +117,7 @@ func recalculate_can_farm() -> void:
 func recalculate_can_ranch() -> void:
 	var b_temp_can_ranch = true
 	
-	if not scvr_soil_cover_type.b_can_ranch:
+	if not _scvr_soil_cover_type.b_can_ranch:
 		b_temp_can_ranch = false
 	
 	_b_can_ranch=b_temp_can_ranch
@@ -124,7 +125,7 @@ func recalculate_can_ranch() -> void:
 func recalculate_can_camp() -> void:
 	var b_temp_can_camp = true
 	
-	if not scvr_soil_cover_type.b_can_camp:
+	if not _scvr_soil_cover_type.b_can_camp:
 		b_temp_can_camp = false
 	
 	_b_can_camp=b_temp_can_camp

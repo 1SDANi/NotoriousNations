@@ -1,28 +1,35 @@
 {
-	"s_name": "Test Map 1",
-	"s_type": "Map",
-	"i_x": 2,
-	"i_y": 2,
 	"dict_tiles": {
 		"0,0": {
+			"a_dict_s_units": [
+				{
+					"s_name": "Unit1",
+					"s_owner": "player1",
+					"s_unit_type": "Archer"
+				}
+			],
 			"s_name": "Barcelona",
-			"s_type": "Tile",
-			"s_soil_cover": "Grassland"
+			"s_soil_cover": "Grassland",
+			"s_type": "Tile"
 		},
 		"0,1": {
 			"s_name": "Barcelona",
-			"s_type": "Tile",
-			"s_soil_cover": "Steppe"
+			"s_soil_cover": "Steppe",
+			"s_type": "Tile"
 		},
 		"1,0": {
 			"s_name": "Barcelona",
-			"s_type": "Tile",
-			"s_soil_cover": "Arctic"
+			"s_soil_cover": "Arctic",
+			"s_type": "Tile"
 		},
 		"1,1": {
 			"s_name": "Barcelona",
-			"s_type": "Tile",
-			"s_soil_cover": "Desert"
+			"s_soil_cover": "Desert",
+			"s_type": "Tile"
 		}
-	}
+	},
+	"i_x": 2,
+	"i_y": 2,
+	"s_name": "Exported Map",
+	"s_type": "Map"
 }

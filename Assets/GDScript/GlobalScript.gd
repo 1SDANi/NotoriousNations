@@ -3,12 +3,18 @@ extends Node
 
 signal new_soilcover_atlas
 signal new_unit_atlas
+signal unit_position_update
+signal tile_cursor_update
 
 # a String containing the name key constant
 const s_name_key: String = "s_name"
 
 # a String containing the missing name constant
 const s_missing_name: String = "MISSING_NAME"
+
+var vc2i_tile_cursor: Vector2 = Vector2i.ZERO
+
+var map_map: Map
 
 var _g_tlst_soil_cover_tileset_source : TileSetAtlasSource
 @export var g_tlst_soil_cover_tileset_source: TileSetAtlasSource:
