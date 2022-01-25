@@ -14,6 +14,7 @@ scmp_soil_cover_map_path = NodePath("SoilCoverMap")
 unmp_unit_map_path = NodePath("Half/Fourth/Eighth/UnitMap")
 
 [node name="SoilCoverMap" parent="." instance=ExtResource( "1_xaiky" )]
+texture_filter = 1
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
@@ -29,6 +30,7 @@ scale = Vector2(0.5, 0.5)
 scale = Vector2(0.5, 0.5)
 
 [node name="UnitMap" parent="Half/Fourth/Eighth" instance=ExtResource( "2_v2si3" )]
+texture_filter = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -77,5 +79,6 @@ size_flags_vertical = 3
 script = ExtResource( "5_aby6b" )
 
 [node name="TileCursor" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource( "6_hxvme" )
 script = ExtResource( "7_x55gu" )

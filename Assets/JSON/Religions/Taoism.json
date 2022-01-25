@@ -1,0 +1,9 @@
+{
+  "s_name":"Taoism",
+  "s_type":"ReligionType",
+  "s_spread_type":"Major",
+  "s_parent_name":"Confucianism",
+  "s_development_type":"Collapse",
+  "i_development_value":1,
+  "i_development_length":1
+}

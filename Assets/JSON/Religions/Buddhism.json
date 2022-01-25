@@ -1,0 +1,9 @@
+{
+  "s_name":"Buddhism",
+  "s_type":"ReligionType",
+  "s_spread_type":"Major",
+  "s_parent_name":"Hinduism",
+  "s_development_type":"Science",
+  "i_development_value":10,
+  "i_development_length":20
+}

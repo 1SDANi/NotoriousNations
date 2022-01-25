@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture2D"
-uid="uid://cya4skjtah1u"
-path="res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"
+uid="uid://cm8smi4t3ukon"
+path="res://.godot/imported/Hinduism.png-771ab6c8d482d2518d7b4e2b0b7505e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/SoilCovers.png"
-dest_files=["res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"]
+source_file="res://Assets/JSON/Religions/Hinduism.png"
+dest_files=["res://.godot/imported/Hinduism.png-771ab6c8d482d2518d7b4e2b0b7505e6.stex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/HDR_as_SRGB=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -1,0 +1,9 @@
+{
+  "s_name":"Confucianism",
+  "s_type":"ReligionType",
+  "s_spread_type":"Minor",
+  "s_parent_name":"Shendao",
+  "s_development_type":"Collapse",
+  "i_development_value":1,
+  "i_development_length":1
+}

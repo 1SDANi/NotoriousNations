@@ -1,0 +1,9 @@
+{
+  "s_name":"Hinduism",
+  "s_type":"ReligionType",
+  "s_spread_type":"Minor",
+  "s_parent_name":"Vedism",
+  "s_development_type":"Commerce",
+  "i_development_value":10,
+  "i_development_length":20
+}

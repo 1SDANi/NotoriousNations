@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture2D"
-uid="uid://cya4skjtah1u"
-path="res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"
+uid="uid://dhouuttwmetui"
+path="res://.godot/imported/Confucianism.png-2a2eaba98272e1528f942b831329dbb3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/SoilCovers.png"
-dest_files=["res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"]
+source_file="res://Assets/JSON/Religions/Confucianism.png"
+dest_files=["res://.godot/imported/Confucianism.png-2a2eaba98272e1528f942b831329dbb3.stex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/HDR_as_SRGB=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

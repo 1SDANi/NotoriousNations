@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture2D"
-uid="uid://cya4skjtah1u"
-path="res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"
+uid="uid://dxjqwa6xdywcr"
+path="res://.godot/imported/Druidism.png-fdb7476c55258935c21ba7c0d4061b5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/SoilCovers.png"
-dest_files=["res://.godot/imported/SoilCovers.png-53626b21c195032abb8adbb314800295.stex"]
+source_file="res://Assets/JSON/Religions/Druidism.png"
+dest_files=["res://.godot/imported/Druidism.png-fdb7476c55258935c21ba7c0d4061b5a.stex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/HDR_as_SRGB=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

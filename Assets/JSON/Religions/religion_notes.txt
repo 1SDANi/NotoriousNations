@@ -1,0 +1,33 @@
+Figured I might as well compile some notes on the religions here. So... here you go.
+
+Angakkuq
+	Intended to represent the religious beliefs of the Inuit peoples of the Arctic circle
+	The religion itself doesn't have a name beyond "Inuit Religion" or some variant thereof, so I gave it the name for their cultures' spiritual leader
+	Its icon represents one of many masks used in its spiritual practices, as there doesn't appear to be mask designs for specfic purposes,
+		I decided to go with a 19th century mask design that is notable for its record breaking auction sale.
+		Though such a choice in icon is highly problematic in its use of the colonialist-introduced capitalist metrics, with no other method of
+		determining a "most iconic" symbol of the Inuit that isn't already planned to be used as the unified icon (Inuksuk) for their region,
+		I decided upon this mask. Suggestions for replacements are welcome.
+Anunnaki
+	Intended to represent the religious beliefs of the ancient Mesopotamian peoples
+	The religion itself doesn't have a name beyond a generic form, so I gave it the name of its central Pantheon of gods
+	The icon represents a bust of Gilgamesh, the hero of the earliest known work of literature and a prominent figure in ancient Mesopotamian mythology
+Anzarism
+	Intended to represent the religious beliefs of the Amazigh peoples of the Maghreb
+	The religion itself doesn't have a name beyond a generic form, so I gave it a name based on the very prominent god Anzar
+	The icon represents the trident attributed to Anzar and used as part of old Moroccan guard uniforms
+Asatru
+	Intended to represent the religious beliefs of the Germanic peoples of Scandinavia and Central Europe
+	Though the religion is usually referred to as Heathenry, such a name only developed under the influence of Christian pressure,
+	though the name Asatru did not exist prior to the modern day, its name and meaning "aesir belief" could have existed prior to Christian contact,
+	finally the name Odinism is incredibly misleading, as it would suggest Odin to be a central figure of worship, which is not necessarily the case.
+	The icon represents the Valknut, an icon widely used by ancient Germanic peoples that is believed to be associated with either Odin or Hrungnir
+Atua
+	Intended to represent the religious beliefs of the Polynesian peoples
+	The religion itself doesn't have a name beyond a generic form, so I gave it the Polynesian term for gods and spirits
+	The icon represents the Koru, a Maori symbol for life, growth, strength, peace, infinity, and cyclicism.
+Baalism
+	Intended to represent the original religious beliefs of the Semitic peoples
+	The religion itself doesn't have a name beyond a generic form, so I gave it the name later Semitic religions often referred to it with to...
+	differentiate it from themselves
+	The icon represents a mask that is believed to have possibly represented Ba'al
