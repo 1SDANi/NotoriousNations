@@ -10,13 +10,15 @@
 
 [node name="TestMap" type="Node2D"]
 script = ExtResource( "1_luq33" )
-scmp_soil_cover_map_path = NodePath("SoilCoverMap")
-unmp_unit_map_path = NodePath("Half/Fourth/Eighth/UnitMap")
+npth_soil_cover_map = NodePath("SoilCoverMap")
+npth_unit_map = NodePath("Half/Fourth/Eighth/UnitMap")
+npth_hmenu = NodePath("CanvasLayer/Control/Panel/ScrollContainer/HBoxContainer")
 
 [node name="SoilCoverMap" parent="." instance=ExtResource( "1_xaiky" )]
 texture_filter = 1
 
 [node name="Camera" type="Camera2D" parent="."]
+texture_filter = 1
 current = true
 script = ExtResource( "2_ccpf7" )
 
@@ -38,8 +40,8 @@ texture_filter = 1
 anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,8 +53,8 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = -8.0
 offset_bottom = -8.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,8 +66,8 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = -8.0
 offset_bottom = -8.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
 vertical_scroll_mode = 0
 __meta__ = {
 "_edit_use_anchors_": false

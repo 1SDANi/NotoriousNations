@@ -81,8 +81,9 @@ func dict_generate_tiles(tiles: Dictionary) -> Dictionary:
 			
 			if a_dict_s_units != []:
 				for dict_s_unit in a_dict_s_units:
-					dict_temp_tiles[s_coordinate].add_unit(Unit.new(JSONReader.get_json_entry(dict_s_unit,Globals.s_name_key,"map coordinate " + s_coordinate,"Unit"),
+					Unit.new(JSONReader.get_json_entry(dict_s_unit,Globals.s_name_key,"map coordinate " + s_coordinate,"Unit"),
 					"Unit",
 					JSONReader.get_json_entry(dict_s_unit,"s_owner","map coordinate " + s_coordinate,"no owner"),
-					Globals._g_dict_unit_types[JSONReader.get_json_entry(dict_s_unit,"s_unit_type","map coordinate " + s_coordinate,null)]))
+					Globals._g_dict_unit_types[JSONReader.get_json_entry(dict_s_unit,"s_unit_type","map coordinate " + s_coordinate,null)],
+					dict_temp_tiles[s_coordinate])
 	return dict_temp_tiles

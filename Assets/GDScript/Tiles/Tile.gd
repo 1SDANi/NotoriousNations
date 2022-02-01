@@ -41,17 +41,25 @@ func _init(name: String, type: String, x: int, y: int, soil_cover_type: SoilCove
 # unit_unit: the unit  to add to the tile
 # returns void
 func add_unit(unit_unit: Unit) -> void:
-	a_unit_units.append(unit_unit)
-	if Globals.map_map:
-		Globals.unit_position_update.emit()
+	if not a_unit_units.has(unit_unit):
+		a_unit_units.append(unit_unit)
+		if Globals.map_map:
+			Globals.unit_position_update.emit()
 
 # remove a unit from the tile
 # unit_unit: the unit to remove from the tile
 # returns void
 func remove_unit(unit_unit: Unit) -> void:
-	a_unit_units.erase(unit_unit)
-	if Globals.map_map:
-		Globals.unit_position_update.emit()
+	if a_unit_units.has(unit_unit):
+		a_unit_units.erase(unit_unit)
+		if Globals.map_map:
+			Globals.unit_position_update.emit()
+
+func can_enter_from(unit : Unit, tile : Tile) -> bool:
+	return true
+	
+func can_leave_to(unit : Unit, tile : Tile) -> bool:
+	return true
 
 # call to recalculate this tile's stats
 # returns void

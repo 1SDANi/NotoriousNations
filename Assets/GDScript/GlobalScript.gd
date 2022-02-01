@@ -12,6 +12,8 @@ const s_name_key: String = "s_name"
 # a String containing the missing name constant
 const s_missing_name: String = "MISSING_NAME"
 
+const imge_back_button = preload("res://Assets/Textures/Back.png")
+
 var vc2i_tile_cursor: Vector2 = Vector2i.ZERO
 
 var map_map: Map
