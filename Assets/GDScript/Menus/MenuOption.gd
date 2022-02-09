@@ -12,6 +12,7 @@ var hmnu_hmenu
 func _ready() -> void:
 	get_viewport().size_changed.connect(on_resize)
 	
+func _draw() -> void:
 	on_resize()
 
 func on_resize():

@@ -13,13 +13,25 @@
 					"s_name":"Unit1",
 					"s_owner":"player1",
 					"s_unit_type":"Archer"
+				},
+				{
+					"s_name":"Unit2",
+					"s_owner":"player1",
+					"s_unit_type":"Javelineer"
 				}
 			]
 		},
 		"0,1": {
 			"s_name": "Barcelona",
 			"s_type": "Tile",
-			"s_soil_cover": "Steppe"
+			"s_soil_cover": "Steppe",
+			"a_dict_s_units": [
+				{
+					"s_name":"Unit1",
+					"s_owner":"player1",
+					"s_unit_type":"Spearman"
+				}
+			]
 		},
 		"1,0": {
 			"s_name": "Barcelona",
