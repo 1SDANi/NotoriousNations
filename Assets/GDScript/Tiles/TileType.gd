@@ -70,8 +70,8 @@ var _b_can_camp: bool = false
 
 func _init (dict: Dictionary) -> void:
 	# call the parent constructor
-	super(dict["s_name"], dict["s_type"])
+	super(dict.get("s_name"), dict.get("s_type"))
 
 	# set the class variables
 	for name in dict:
-		self["_" + name] = dict[name]
+		self.set("_" + name, dict.get(name))

@@ -71,10 +71,10 @@ func dict_generate_tiles(tiles: Dictionary) -> Dictionary:
 				return {}
 
 			dict_temp_tiles[s_coordinate] = Tile.new ({
-				"name": JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
-				"type": s_tile_type_name,
-				"x": x,
-				"y": y,
+				"s_name": JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
+				"s_type": s_tile_type_name,
+				"i_x": x,
+				"i_y": y,
 				"soil_cover_type": Globals._g_dict_soil_cover_types[JSONReader.get_json_entry(dict_temp_entry,"s_soil_cover","map coordinate " + s_coordinate,"Grassland")]
 			})
 

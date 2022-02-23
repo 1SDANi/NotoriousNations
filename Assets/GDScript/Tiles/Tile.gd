@@ -32,8 +32,8 @@ func _init(dict: Dictionary) -> void:
 	super(dict)
 
 	# set the class variables
-	_i_x=dict.x
-	_i_y=dict.y
+	_i_x=dict.i_x
+	_i_y=dict.i_y
 	_scvr_soil_cover_type=dict.soil_cover_type
 
 	# recalculate this tile's stats

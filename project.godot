@@ -64,6 +64,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://Assets/GDScript/JSON/MapJSON.gd"
 }, {
+"base": "RefCounted",
+"class": &"SoilCoverJSON",
+"language": &"GDScript",
+"path": "res://Assets/GDScript/JSON/SoilCoverJSON.gd"
+}, {
 "base": "LayerMap",
 "class": &"SoilCoverMap",
 "language": &"GDScript",
@@ -98,6 +103,11 @@ _global_script_classes=[{
 "class": &"UnitType",
 "language": &"GDScript",
 "path": "res://Assets/GDScript/Units/UnitType.gd"
+}, {
+"base": "RefCounted",
+"class": &"UnitTypeJSON",
+"language": &"GDScript",
+"path": "res://Assets/GDScript/JSON/UnitTypeJSON.gd"
 }]
 _global_script_class_icons={
 "Camera": "",
@@ -111,13 +121,15 @@ _global_script_class_icons={
 "LayerMap": "",
 "Map": "",
 "MapJSON": "",
+"SoilCoverJSON": "",
 "SoilCoverMap": "",
 "SoilCoverType": "",
 "Tile": "",
 "TileType": "",
 "Unit": "",
 "UnitMap": "",
-"UnitType": ""
+"UnitType": "",
+"UnitTypeJSON": ""
 }
 
 [application]
