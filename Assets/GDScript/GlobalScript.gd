@@ -52,15 +52,24 @@ func b_register_JSON_thing(thing, s_type: String, s_path: String) -> bool:
 
 	if not thing:
 		# push a warning and return false if the thing is null
-		push_warning("something went wrong! somehow the unit type at " + s_path + " was not created")
+		push_warning("something went wrong! somehow the type at " + s_path + " was not created")
 		return false
 
 	# register the thing and return true
 	self["_g_dict_" + s_type + "_types"][thing.s_name] = thing
 	print(self["_g_dict_" + s_type + "_types"][thing.s_name])
 	return true
+
 func b_register_JSON_atlas(atlas, s_type: String, s_path: String) -> bool:
-	return false;
+	if not atlas:
+		# push a warning and return false if the thing is null
+		push_warning("something went wrong! somehow the atlas at " + s_path + " was not created")
+		return false;
+		
+	# register the thing and return true
+	self["_g_imge_" + s_type + "_atlas"] = atlas
+	print("_g_imge_" + s_type + "_atlas")
+	return true
 
 # call to register a new unit atlas
 # imge_unit_atlas: the image to be registered

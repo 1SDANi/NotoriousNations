@@ -146,4 +146,4 @@ static func parse_folder(s_base_path: String, folder: Array) -> void:
 
 		i_i += 1
 
-	Globals.b_register_unit_atlas(imge_atlas)
+	Globals.b_register_JSON_atlas(imge_atlas, folder[3], s_base_path)
