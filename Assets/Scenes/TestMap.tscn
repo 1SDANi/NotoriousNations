@@ -74,6 +74,8 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel/ScrollContainer"]
+offset_right = 992.0
+offset_bottom = 88.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( "5_aby6b" )

@@ -1,16 +1,16 @@
 {
-  "s_name":"Spearman",
-  "s_type":"UnitType",
-  "s_combat_role":"Frontline",
-  "s_combat_range":"Melee",
-  "i_strength":5,
-  "i_speed":1,
-  "i_open_def":50,
-  "b_frontline":true,
-  "dict_i_role_atk":{
-    "HeavyCavalry":25
+  "s_name": "Spearman",
+  "s_type": "UnitType",
+  "s_combat_role": "Frontline",
+  "s_combat_range": "Melee",
+  "i_strength": 5,
+  "i_speed": 1,
+  "i_open_def": 50,
+  "b_frontline": true,
+  "dict_i_role_atk": {
+    "HeavyCavalry": 25
   },
-  "dict_i_role_def":{
-    "HeavyCavalry":25
+  "dict_i_role_def": {
+    "HeavyCavalry": 25
   }
 }

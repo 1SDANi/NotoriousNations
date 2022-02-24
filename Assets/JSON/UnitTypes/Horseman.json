@@ -1,11 +1,11 @@
 {
-  "s_name":"Horseman",
-  "s_type":"UnitType",
-  "s_combat_role":"HeavyCavalry",
-  "s_combat_range":"Melee",
-  "i_strength":6,
-  "i_speed":2,
-  "i_city_atk":-50,
-  "b_no_tile_def":true,
-  "b_flanking":true
+  "s_name": "Horseman",
+  "s_type": "UnitType",
+  "s_combat_role": "HeavyCavalry",
+  "s_combat_range": "Melee",
+  "i_strength": 6,
+  "i_speed": 2,
+  "i_city_atk": -50,
+  "b_no_tile_def": true,
+  "b_flanking": true
 }

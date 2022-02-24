@@ -1,12 +1,12 @@
 {
-  "s_name":"Semidesert",
-  "s_type":"SoilCover",
-  "i_food":0,
-  "i_prod":1,
-  "i_comm":0,
-  "i_move":1,
-  "b_rainwater":false,
-  "b_can_farm":true,
-  "b_can_ranch":true,
-  "b_can_camp":true
+  "s_name": "Semidesert",
+  "s_type": "SoilCover",
+  "i_food": 0,
+  "i_prod": 1,
+  "i_comm": 0,
+  "i_move": 1,
+  "b_rainwater": false,
+  "b_can_farm": true,
+  "b_can_ranch": true,
+  "b_can_camp": true
 }

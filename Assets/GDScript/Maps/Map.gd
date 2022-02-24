@@ -7,7 +7,7 @@ const s_tile_type_name : String = "Tile"
 # int containing the width of this map
 var _i_x: int = -1:
 	get: return _i_x
-	
+
 # int containing the height of this map
 var _i_y: int = -1:
 	get: return _i_y
@@ -42,11 +42,11 @@ func dict_tiles_from_int(x: int, y: int) -> Tile:
 # returns void
 func _init(name: String,type: String,x: int,y: int,tiles: Dictionary) -> void:
 	super(name,type)
-	
+
 	# set the map's width and height
 	_i_x=x
 	_i_y=y
-	
+
 	# generate the map's tiles
 	_dict_tiles=dict_generate_tiles(tiles)
 
@@ -61,24 +61,27 @@ func dict_generate_tiles(tiles: Dictionary) -> Dictionary:
 	for x in range(_i_x):
 		for y in range(_i_y):
 			s_coordinate = str(x) + "," + str(y)
-			
+
 			if not tiles.has(s_coordinate):
 				push_warning("tile at " + s_coordinate + "is missing from map")
 				return {}
-				
+
 			dict_temp_entry = tiles[s_coordinate]
-			
+
 			if not JSONReader.dict_validate_json(dict_temp_entry,"map coordinate " + s_coordinate,s_tile_type_name):
 				return {}
-				
-			dict_temp_tiles[s_coordinate] = Tile.new (JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
-													s_tile_type_name,
-													x,
-													y,
-													Globals._g_dict_soil_cover_types[JSONReader.get_json_entry(dict_temp_entry,"s_soil_cover","map coordinate " + s_coordinate,"Grassland")])
-			
+
+			dict_temp_tiles[s_coordinate] = Tile.new ({
+				"s_name": JSONReader.get_json_entry(dict_temp_entry,Globals.s_name_key,"map coordinate " + s_coordinate,Globals.s_missing_name),
+				"s_type": s_tile_type_name,
+				"i_x": x,
+				"i_y": y,
+				"soil_cover_type": Globals._g_dict_soil_cover_types[JSONReader.get_json_entry(dict_temp_entry,"s_soil_cover","map coordinate " + s_coordinate,"Grassland")]
+			})
+
+
 			a_dict_s_units = JSONReader.get_json_entry(dict_temp_entry,"a_dict_s_units","map coordinate " + s_coordinate,[])
-			
+
 			if a_dict_s_units != []:
 				for dict_s_unit in a_dict_s_units:
 					Unit.new(JSONReader.get_json_entry(dict_s_unit,Globals.s_name_key,"map coordinate " + s_coordinate,"Unit"),

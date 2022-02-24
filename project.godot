@@ -45,6 +45,11 @@ _global_script_classes=[{
 "path": "res://Assets/GDScript/JSON/JSONReader.gd"
 }, {
 "base": "RefCounted",
+"class": &"JSONTypeCraweler",
+"language": &"GDScript",
+"path": "res://Assets/GDScript/JSON/JSONTypeCraweler.gd"
+}, {
+"base": "RefCounted",
 "class": &"JSONWriter",
 "language": &"GDScript",
 "path": "res://Assets/GDScript/JSON/JSONWriter.gd"
@@ -122,6 +127,7 @@ _global_script_class_icons={
 "HMenu": "",
 "Item": "",
 "JSONReader": "",
+"JSONTypeCraweler": "",
 "JSONWriter": "",
 "LayerMap": "",
 "Map": "",
@@ -176,8 +182,3 @@ right={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"unicode":0,"echo":false,"script":null)
 ]
 }
-
-[rendering]
-
-textures/default_filters/use_nearest_mipmap_filter=true
-textures/default_filters/anisotropic_filtering_level=0

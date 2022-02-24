@@ -50,6 +50,35 @@ var _g_imge_unit_atlas: Image
 @export var g_imge_unit_atlas: Image:
 	get: return _g_imge_unit_atlas
 
+# call to register a new thing
+# thing: the thing to be registered
+# s_type: the type of the thing to be registered
+# s_path: String containing the path of the thing, used for error checking
+# returns whether an error did not occur
+func b_register_JSON_thing(thing, s_type: String, s_path: String) -> bool:
+	print("reg-i-thing")
+
+	if not thing:
+		# push a warning and return false if the thing is null
+		push_warning("something went wrong! somehow the type at " + s_path + " was not created")
+		return false
+
+	# register the thing and return true
+	self["_g_dict_" + s_type + "_types"][thing.s_name] = thing
+	print(self["_g_dict_" + s_type + "_types"][thing.s_name])
+	return true
+
+func b_register_JSON_atlas(atlas, s_type: String, s_path: String) -> bool:
+	if not atlas:
+		# push a warning and return false if the thing is null
+		push_warning("something went wrong! somehow the atlas at " + s_path + " was not created")
+		return false;
+		
+	# register the thing and return true
+	self["_g_imge_" + s_type + "_atlas"] = atlas
+	print("_g_imge_" + s_type + "_atlas")
+	return true
+
 # call to register a new unit atlas
 # imge_unit_atlas: the image to be registered
 # returns whether an error did not occur
@@ -58,15 +87,15 @@ func b_register_unit_atlas(imge_unit_atlas: Image) -> bool:
 	if not imge_unit_atlas:
 		push_warning("something went wrong! somehow the unit atlas was not created")
 		return false
-	
+
 	# register the unit atlas and return true
 	_g_imge_unit_atlas=imge_unit_atlas
-	
+
 	var imtx : ImageTexture = ImageTexture.new()
 	imtx.create_from_image(Globals._g_imge_unit_atlas)
-	
+
 	g_tlst_unit_tileset_source = TileSetAtlasSource.new()
-	
+
 	new_unit_atlas.emit()
 	return true
 
@@ -79,7 +108,7 @@ func b_register_unit_type(untp_unit_type: UnitType, s_path: String) -> bool:
 	if not untp_unit_type:
 		push_warning("something went wrong! somehow the unit type at " + s_path + " was not created")
 		return false
-	
+
 	# register the soil cover type and return true
 	_g_dict_unit_types[untp_unit_type.s_name]=untp_unit_type
 	return true
@@ -92,15 +121,15 @@ func b_register_soil_cover_atlas(imge_soil_cover_atlas: Image) -> bool:
 	if not imge_soil_cover_atlas:
 		push_warning("something went wrong! somehow the soil cover atlas was not created")
 		return false
-	
+
 	# register the soil cover atlas and return true
 	_g_imge_soil_cover_atlas=imge_soil_cover_atlas
-	
+
 	var imtx : ImageTexture = ImageTexture.new()
 	imtx.create_from_image(Globals.g_imge_soil_cover_atlas)
-	
+
 	g_tlst_soil_cover_tileset_source = TileSetAtlasSource.new()
-	
+
 	new_soilcover_atlas.emit()
 	return true
 
@@ -113,7 +142,7 @@ func b_register_soil_cover_type(scvr_soil_cover: SoilCoverType, s_path: String) 
 	if not scvr_soil_cover:
 		push_warning("something went wrong! somehow the soil cover at " + s_path + " was not created")
 		return false
-	
+
 	# register the soil cover type and return true
 	_g_dict_soil_cover_types[scvr_soil_cover.s_name]=scvr_soil_cover
 	return true
@@ -127,7 +156,7 @@ func b_register_map(map_map: Map, s_path: String) -> bool:
 	if not map_map:
 		push_warning("something went wrong! somehow the soil cover at " + s_path + " was not created")
 		return false
-	
+
 	# register the soil cover type and return true
 	_g_dict_maps[map_map.s_name] = map_map
 	return true

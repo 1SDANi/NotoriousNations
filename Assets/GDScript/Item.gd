@@ -5,9 +5,7 @@ extends RefCounted
 var s_name: String
 		
 # a string of the type of the item
-var _s_type: String:
-	get: 
-		return _s_type
+var s_type: String
 
 # called upon initialization
 # name: String containing the name of the item
@@ -15,4 +13,4 @@ var _s_type: String:
 # returns void
 func _init(name: String, type: String) -> void:
 	s_name=name
-	_s_type=type
+	s_type=type

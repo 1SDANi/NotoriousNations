@@ -18,14 +18,37 @@ func _ready() -> void:
 	hmnu_hmenu = get_node(npth_hmenu)
 	
 	Globals.unit_position_update.connect(on_unit_position_update)
-	
-	SoilCoverJSON.parse_folder()
-	UnitTypeJSON.parse_folder()
+
+	print("hello world")
+
+	for folder in [
+		[
+			"SoilCovers",
+			preload("res://Assets/GDScript/Tiles/SoilCoverType.gd"),
+			"SoilCover",
+			"soil_cover"
+		],
+		[
+			"UnitTypes",
+			preload("res://Assets/GDScript/Units/UnitType.gd"),
+			"UnitType",
+			"unit"
+		]
+		# [
+		# 	"Religions"
+		#
+		# ],
+	]:
+		JSONTypeCraweler.parse_folder("res://Assets/JSON/", folder)
+
+	# SoilCoverJSON.parse_folder()
+	# UnitTypeJSON.parse_folder()
+
 	MapJSON.a_map_parse_folder()
-	
+
 	scmp_soil_cover_map.on_new_soilcover_atlas()
 	unmp_unit_map.on_new_unit_atlas()
-	
+
 	# temporary implemenetation, to later be replaced with a Map Selector
 	# set map_map to Test Map 1 from globals
 	Globals.map_map = Globals._g_dict_maps["Test Map 1"]
@@ -47,7 +70,7 @@ func _unhandled_input(event):
 		
 		# get the local position of the mouse position
 		var v_event_pos = scmp_soil_cover_map.to_local(scmp_soil_cover_map.get_global_mouse_position())
-		
+
 		# convert the local position of the mouse position to the map coordinates
 		var v_tile_pos = scmp_soil_cover_map.world_to_map(v_event_pos)
 		
@@ -69,7 +92,7 @@ func _unhandled_input(event):
 		var v_tile_pos = scmp_soil_cover_map.world_to_map(v_event_pos)
 		
 		hmnu_hmenu.move_selected_unit(v_tile_pos)
-	
+
 # cycle cell index
 # v_coords vector2i representing the current cell coordinates
 func vc2i_cycle(v_index: Vector2i) -> Vector2i:
@@ -122,7 +145,7 @@ func load_map() -> void:
 			var i_atlas_y : int = scvr_soil_cover.i_y
 			
 			scmp_soil_cover_map.set_cell(0,Vector2i(x,y),0,Vector2i(i_atlas_x,i_atlas_y),0)
-			
+
 			populate_tile(x,y)
 
 # save map
@@ -133,32 +156,32 @@ func save_map() -> void:
 	
 	# string for temporary storage of coordinates
 	var s_coordinates
-	
+
 	# temporary implementation, to be replaced with a prompt to enter a name later
 	# set the s_name key/value pair of the map to be exported
 	dict_map["s_name"] = "Exported Map"
-	
+
 	# set the s_type key/value pair of the map to be exported
 	dict_map["s_type"] = "Map"
-	
+
 	# gets the rect within which all non-null tiles exist
 	var rect_map = scmp_soil_cover_map.get_used_rect()
-	
+
 	# get the length of rect_map
 	var i_x = rect_map.size.x
-	
+
 	# get the height of rect_map
 	var i_y = rect_map.size.y
-	
+
 	# set the i_x key/value pair of the map to be exported
 	dict_map["i_x"]=i_x
-	
+
 	# set the i_y key/value pair of the map to be exported to an empty dictionary
 	dict_map["i_y"]=i_y
-	
+
 	# set the dict_tiles key/value pair of the map to be exported to an empty dictionary
 	dict_map["dict_tiles"]={}
-	
+
 	# for each column(?) in rect_map
 	for x in range(i_x):
 	# for each row(?) in rect_map

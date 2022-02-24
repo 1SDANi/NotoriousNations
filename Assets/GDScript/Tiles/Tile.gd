@@ -24,18 +24,18 @@ var _scvr_soil_cover_type: SoilCoverType = null:
 # y: int containing the vertical position of this tile
 # soil_cover_type: the SoilCoverType of this tile
 # returns void
-func _init(name: String, type: String, x: int, y: int, soil_cover_type: SoilCoverType) -> void:
+func _init(dict: Dictionary) -> void:
 	# call the parent constructor
-	super(name,type,0,0,0,0,false,false,false,false)
-	
+	super(dict)
+
 	# set the class variables
-	_i_x=x
-	_i_y=y
-	_scvr_soil_cover_type=soil_cover_type
-	
+	_i_x=dict.i_x
+	_i_y=dict.i_y
+	_scvr_soil_cover_type=dict.soil_cover_type
+
 	# recalculate this tile's stats
 	recalculate()
-	
+
 
 # adds a unit to the tile
 # unit_unit: the unit  to add to the tile
@@ -77,63 +77,51 @@ func recalculate() -> void:
 # returns void
 func recalculate_food() -> void:
 	var i_temp_food = 0
-	
 	i_temp_food += _scvr_soil_cover_type.i_food
-	
 	_i_food=i_temp_food
-	
+
 func recalculate_prod() -> void:
 	var i_temp_prod = 0
-	
 	i_temp_prod += _scvr_soil_cover_type.i_prod
-	
 	_i_prod=i_temp_prod
-	
+
 func recalculate_comm() -> void:
 	var i_temp_comm = 0
-	
 	i_temp_comm += _scvr_soil_cover_type.i_comm
-	
 	_i_comm=i_temp_comm
-	
+
 func recalculate_move() -> void:
 	var i_temp_move : int = 0
-	
 	if i_temp_move >= 0 and _scvr_soil_cover_type.i_move >= 0:
 		i_temp_move += _scvr_soil_cover_type.i_move
 	elif _scvr_soil_cover_type.i_move < i_temp_move:
 		i_temp_move = _scvr_soil_cover_type.i_move
-	
 	_i_move=i_temp_move
-	
+
 func recalculate_rainwater() -> void:
 	var b_temp_rainwater = true
-	
 	if not _scvr_soil_cover_type.b_rainwater:
 		b_temp_rainwater = false
-	
+
 	_b_rainwater=b_temp_rainwater
-	
+
 func recalculate_can_farm() -> void:
 	var b_temp_can_farm = true
-	
 	if not _scvr_soil_cover_type.b_can_farm:
 		b_temp_can_farm = false
-	
+
 	_b_can_farm=b_temp_can_farm
-	
+
 func recalculate_can_ranch() -> void:
 	var b_temp_can_ranch = true
-	
 	if not _scvr_soil_cover_type.b_can_ranch:
 		b_temp_can_ranch = false
-	
+
 	_b_can_ranch=b_temp_can_ranch
-	
+
 func recalculate_can_camp() -> void:
 	var b_temp_can_camp = true
-	
 	if not _scvr_soil_cover_type.b_can_camp:
 		b_temp_can_camp = false
-	
+
 	_b_can_camp=b_temp_can_camp

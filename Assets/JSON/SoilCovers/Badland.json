@@ -1,12 +1,12 @@
 {
-  "s_name":"Badland",
-  "s_type":"SoilCover",
-  "i_food":0,
-  "i_prod":0,
-  "i_comm":0,
-  "i_move":-2,
-  "b_rainwater":false,
-  "b_can_farm":false,
-  "b_can_ranch":false,
-  "b_can_camp":false
+  "s_name": "Badland",
+  "s_type": "SoilCover",
+  "i_food": 0,
+  "i_prod": 0,
+  "i_comm": 0,
+  "i_move": -2,
+  "b_rainwater": false,
+  "b_can_farm": false,
+  "b_can_ranch": false,
+  "b_can_camp": false
 }

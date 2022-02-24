@@ -1,12 +1,12 @@
 {
-  "s_name":"Tundra",
-  "s_type":"SoilCover",
-  "i_food":0,
-  "i_prod":0,
-  "i_comm":0,
-  "i_move":-1,
-  "b_rainwater":false,
-  "b_can_farm":false,
-  "b_can_ranch":true,
-  "b_can_camp":true
+  "s_name": "Tundra",
+  "s_type": "SoilCover",
+  "i_food": 0,
+  "i_prod": 0,
+  "i_comm": 0,
+  "i_move": -1,
+  "b_rainwater": false,
+  "b_can_farm": false,
+  "b_can_ranch": true,
+  "b_can_camp": true
 }
