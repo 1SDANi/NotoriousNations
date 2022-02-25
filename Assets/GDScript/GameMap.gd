@@ -56,7 +56,6 @@ func _ready() -> void:
 	# load map_map
 	load_map()
 	Globals.tile_cursor_update.emit()
-	Globals.unit_position_update.emit()
 
 func on_unit_position_update(to : Tile, from : Tile):
 	populate_tile(to.i_x,to.i_y)
@@ -121,7 +120,7 @@ func populate_tile(x : int, y : int):
 	
 	for i_x in range(0,8,1):
 		for i_y in range(0,4,1):
-			unmp_unit_map.set_cell(0,Vector2i(x*8+i_x,y*8+4+i_y),0,Vector2i(-1,-1),0)
+			unmp_unit_map.set_cell(0,Vector2i(x*8+i_x,y*8+4+i_y),-1,Vector2i(-1,-1),-1)
 	
 	for unit_unit in a_unit_units:
 		if i_i>32:

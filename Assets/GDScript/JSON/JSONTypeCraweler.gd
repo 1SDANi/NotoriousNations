@@ -132,8 +132,8 @@ static func parse_folder(s_base_path: String, folder: Array) -> void:
 		# dict["s_name"] = (JSONReader.get_json_entry(dict_json,Globals.s_name_key,a_s_valid_paths[i_i],Globals.s_missing_name)),
 		# dict["s_type"] = folder[2]
 
-		dict["i_x"] = i_x_pos
-		dict["i_y"] = i_y_pos
+		dict["_i_x"] = i_x_pos
+		dict["_i_y"] = i_y_pos
 
 		print("test")
 

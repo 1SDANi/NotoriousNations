@@ -77,6 +77,13 @@ func b_register_JSON_atlas(atlas, s_type: String, s_path: String) -> bool:
 	# register the thing and return true
 	self["_g_imge_" + s_type + "_atlas"] = atlas
 	print("_g_imge_" + s_type + "_atlas")
+	
+	if s_type=="unit":
+		new_unit_atlas.emit()
+		
+	if s_type=="soil_cover":
+		new_soilcover_atlas.emit()
+	
 	return true
 
 # call to register a new unit atlas
@@ -108,7 +115,7 @@ func b_register_unit_type(untp_unit_type: UnitType, s_path: String) -> bool:
 	if not untp_unit_type:
 		push_warning("something went wrong! somehow the unit type at " + s_path + " was not created")
 		return false
-
+	
 	# register the soil cover type and return true
 	_g_dict_unit_types[untp_unit_type.s_name]=untp_unit_type
 	return true
